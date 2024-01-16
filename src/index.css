@@ -1,0 +1,551 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.page {
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.link {
+  padding: 16px;
+}
+/* FilterDropdown.css */
+
+/* YourMainComponent.css */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.main-image-container{
+  width: 100vw;
+  border-radius: 8px;
+}
+.category-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filter-dropdown-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-dropdown-menu-item {
+  font-size: 16px;
+}
+.filter-dropdown {
+  height: 50px;
+}
+/* Add more custom styling as needed */
+/* YourMainComponent.css */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.category-box {
+  border: 1px solid #ddd; /* Border color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.category-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filter-dropdown-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-dropdown-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.filter-dropdown-menu-item {
+  font-size: 16px;
+}
+.category-dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  appearance: none; /* Remove default arrow in Chrome/Opera/Safari */
+  -webkit-appearance: none; /* Remove default arrow in older versions of Chrome/Safari */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" /></svg>'); /* Add a custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+.filter-dropdown-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" /></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 14px;
+  cursor: pointer;
+}
+/* Add more custom styling as needed */
+.images-data {
+  width: 25vw;
+}
+
+.product-details-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumbnail {
+  flex: 1;
+}
+
+.product-thumbnail img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.product-images {
+  margin-top: 20px;
+}
+
+.product-images img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-slide img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 300px; /* Adjust the height based on your preference */
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mobile-stepper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+  margin: 0 8px;
+}
+
+.product-info p {
+  margin-bottom: 10px;
+}
+
+/* Thumbnails */
+.thumbnails-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 20px; */
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.1);
+}
+/* .rightSide {
+  width: 70%;
+}
+.leftSide {
+  width: 30%;
+} */
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  width: 155px;
+}
+.imageStyle {
+  height: auto;
+  width: 100%;
+}
+.menu-category {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown,
+.sub-dropdown {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.selected-categories {
+  margin-top: 20px;
+}
+
+/* Add more styling based on your design preferences */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 20vw;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 1rem;
+}
+.api-image-data{
+  width: 22vw;
+    height: 22vh;
+}
+/* Add other styles as needed */
+
+.thumbnails-container {
+  width: 150px; /* Adjust as needed */
+  /* margin-right: 20px; */
+}
+
+.thumbnail {
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: #007bff; /* Highlight border on hover, adjust color as needed */
+  }
+
+  &.active-thumbnail {
+    border-color: #007bff; /* Border color for active thumbnail, adjust as needed */
+  }
+}
+
+
+.product-info {
+  flex-grow: 1;
+  padding: 0px 20px;
+  width: 70vw;
+}
+
+.product-info p {
+  margin-bottom: 10px;
+}
+
+/* Style adjustments for individual product info items */
+.product-info p:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.product-info p:nth-child(2){
+  font-size: 1em;
+  font-weight: 500;
+}
+.product-info {
+  padding: 0px 20px;
+}
+
+.product-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product-info p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-info .brand {
+  font-weight: bold;
+  color: #555; /* You can choose the color you prefer */
+}
+
+.product-info .rating {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-info .rating .MuiRating-root {
+  margin-top: -4px; /* Adjust this value as needed */
+}
+
+.product-info .deal-of-the-day {
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #CC0C39!important;
+    padding: 4px 8px 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.product-info .discount {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #e53935; /* Red color, adjust as needed */
+}
+
+.product-info .discount span {
+  font-weight: bold;
+  color:#000;
+}
+.money-symbol {
+  position: relative;
+  top: -0.75em;
+    font-size: 13px;
+}
+
+/* Add more styles as needed */
+.product-container{
+  height: 32rem;
+    overflow: scroll;
+}
+.cart-product-description{
+display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* Add this CSS to your existing styles */
+
+/* Container */
+.shadow-md {
+  width: 75%;
+  border: 2px solid #e2e8f0;
+  margin: 6rem auto;
+  /* padding: 1rem; */
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+.flex-tabs {
+  display: flex;
+  margin-top: -1rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fca311;
+  color: #fff;
+  border: 2px solid #e2e8f0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+/* Cart Card */
+.cart-card {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0; */
+}
+
+.cart-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a202c;
+}
+
+.cart-product-description {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.brand {
+  color: #4a5568;
+}
+
+.rating {
+  color: #4a5568;
+  align-items: center;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.remove-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e2e8f0;
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #ed4343;
+  color: #fff;
+}
+
+/* Price */
+.discount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-left: auto;
+}
+
+.text-green-500 {
+  color: #48bb78;
+}
+
+.text-red-500 {
+  color: #ed4343;
+}
